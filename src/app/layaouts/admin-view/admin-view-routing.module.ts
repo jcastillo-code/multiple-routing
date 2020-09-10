@@ -4,10 +4,17 @@ import { AdminViewComponent } from './admin-view.component';
 
 
 const routes: Routes = [
-  { path: '', component: AdminViewComponent },
-  {
-    path: 'dashboard', 
-    loadChildren: () => import('../../modules/dashboard/dashboard.module').then(m => m.DashboardModule)
+  { path: '', component: AdminViewComponent,
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('../../modules/dashboard/dashboard.module').then(mod => mod.DashboardModule),
+      },
+      {
+        path: "map",
+        loadChildren: () => import('../../modules/map/map.module').then(mod => mod.MapModule),
+      }
+    ]
   }
 ];
 

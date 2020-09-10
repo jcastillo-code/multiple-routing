@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: 'admin', 
     loadChildren: () => import('./layaouts/admin-view/admin-view.module').then(m => m.AdminViewModule)
   },
   {
