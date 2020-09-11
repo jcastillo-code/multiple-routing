@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AdminViewRoutingModule } from './admin-view-routing.module';
 import { AdminViewComponent } from './admin-view.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { MatSidenavModule } from "@angular/material";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     AdminViewRoutingModule,
-    SharedModule
+    SharedModule,
+    MatSidenavModule
   ]
 })
 export class AdminViewModule { }
