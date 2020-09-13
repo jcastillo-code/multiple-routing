@@ -1,1 +1,32 @@
-<p>sidebar works!</p>
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2>Title</h2>
+            <h4>Subtitle</h4>
+        </div>
+        <img src="https://miro.medium.com/max/522/1*K7omnYT0GcRdQfldY5Gj6Q.png" alt="AdminMenu">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Pages</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin"> Dashboard </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin"> News </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin/map"> Map </a>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin"> 
+        <mat-icon>import_contacts</mat-icon>
+        contact 
+    </a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin"> 
+        <mat-icon>contact_phone</mat-icon>
+        Phone 
+    </a>
+
+</mat-nav-list>
