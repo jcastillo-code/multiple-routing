@@ -5,11 +5,13 @@
 }
 
 mat-drawer{
-    width: 350px;
+    width: 15vw;
 }
 
 mat-drawer-container{
     height: 100%;
+    width: 100%;
+    background-color: cadetblue;
 }
 
 mat-drawer-content{
