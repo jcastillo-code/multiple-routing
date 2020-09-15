@@ -62,6 +62,10 @@ export class ColumnChartComponent implements OnInit {
             headerFormat: '<b>{point.x}</b><br/>',
             pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
         },
+        credits:{
+            enabled: false
+        },
+        colors: ['#FF5252', '#EEF858', '#58F88B'],
         plotOptions: {
             column: {
                 stacking: 'normal',
@@ -71,13 +75,13 @@ export class ColumnChartComponent implements OnInit {
             }
         },
         series: [{
-            name: 'John',
+            name: 'Negative',
             data: [5, 3, 4, 7, 2]
         }, {
-            name: 'Jane',
+            name: 'Neutral',
             data: [2, 2, 3, 2, 1]
         }, {
-            name: 'Joe',
+            name: 'Positive',
             data: [3, 4, 4, 2, 5]
         }]
     };
