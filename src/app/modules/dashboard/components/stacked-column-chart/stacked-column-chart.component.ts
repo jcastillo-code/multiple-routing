@@ -3,23 +3,29 @@ import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
 
 @Component({
-  selector: 'app-column-chart',
-  templateUrl: './column-chart.component.html',
-  styleUrls: ['./column-chart.component.css']
+  selector: 'app-stacked-column-chart',
+  templateUrl: './stacked-column-chart.component.html',
+  styleUrls: ['./stacked-column-chart.component.css']
 })
-export class ColumnChartComponent implements OnInit {
+export class StackedColumnChartComponent implements OnInit {
 
   @Input() label: string;
   @Input() total: string;
   @Input() percentage: string;
   //@Input() data = [];
 
-  Highcharts = Highcharts;
-  chartOptions = {};
+  public Highcharts = Highcharts;
+  public chartOptions = {};
 
   constructor() { }
 
   ngOnInit() {
+    
+    this.buildGraphics();
+  }
+
+  buildGraphics(){
+
     this.chartOptions = {
         chart: {
             type: 'column'
@@ -36,7 +42,7 @@ export class ColumnChartComponent implements OnInit {
                 text: 'Total fruit consumption'
             },
             stackLabels: {
-                enabled: true,
+                enabled: false,  // this option show value on bar
                 style: {
                     fontWeight: 'bold',
                     color: ( // theme
@@ -65,12 +71,26 @@ export class ColumnChartComponent implements OnInit {
         credits:{
             enabled: false
         },
-        colors: ['#FF5252', '#EEF858', '#58F88B'],
+        colors: [
+            '#FF5252', // red
+            '#EEF858',  // yeloow
+            '#58F88B' // green
+        ],
         plotOptions: {
             column: {
                 stacking: 'normal',
                 dataLabels: {
-                    enabled: true
+                    enabled: false // this option show value in bar
+                }
+            },
+            series: {
+                cursor: 'pointer',
+                point: {
+                    events: {
+                        click: function () {
+                            alert('Category: ' + this.category + ', value: ' + this.y);
+                        }
+                    }
                 }
             }
         },
@@ -93,6 +113,7 @@ export class ColumnChartComponent implements OnInit {
         new Event('resize')
       );
     },300);
+
   }
 
 }

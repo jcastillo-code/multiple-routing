@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColumnChartComponent } from './column-chart.component';
+import { StackedColumnChartComponent } from './stacked-column-chart.component';
 
-describe('ColumnChartComponent', () => {
-  let component: ColumnChartComponent;
-  let fixture: ComponentFixture<ColumnChartComponent>;
+describe('StackedColumnChartComponent', () => {
+  let component: StackedColumnChartComponent;
+  let fixture: ComponentFixture<StackedColumnChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ColumnChartComponent ]
+      declarations: [ StackedColumnChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ColumnChartComponent);
+    fixture = TestBed.createComponent(StackedColumnChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

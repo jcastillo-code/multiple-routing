@@ -6,7 +6,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 /* Components */
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { StateCardComponent } from './components/state-card/state-card.component';
-import { ColumnChartComponent } from './components/column-chart/column-chart.component';
+import { StackedColumnChartComponent } from './components/stacked-column-chart/stacked-column-chart.component';
 
 /* Material imports */
 import { MatCardModule, MatDividerModule, MatIconModule } from '@angular/material';
@@ -18,7 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   declarations: [
     DashboardComponent,
     StateCardComponent,
-    ColumnChartComponent
+    StackedColumnChartComponent
   ],
   imports: [
     CommonModule,
